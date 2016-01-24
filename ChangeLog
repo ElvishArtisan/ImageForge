@@ -1,2 +1,7 @@
 2016-01-22 Fred Gleason <fredg@paravelsystems.com>
 	* Initial package creation.
+2016-01-22 Fred Gleason <fredg@paravelsystems.com>
+	* Added 'config.pl'.
+	* Added 'decant.pl'.
+2016-01-22 Fred Gleason <fredg@paravelsystems.com>
+	* Completed 'decant.pl'.
