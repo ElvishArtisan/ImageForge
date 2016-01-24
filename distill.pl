@@ -150,7 +150,7 @@ my $final_size;
 #
 printf("Copying filesystem (may take a few minutes)...");
 system "mount ".$newpart_name." /mnt";
-system "cp -a firmware/rootfs/".$ARGV[2]."/* /mnt/";
+system "cp -a ".$config_firmware_root."/rootfs/".$ARGV[2]."/* /mnt/";
 system "umount ".$newpart_name;
 system "sync";
 print "done.";
@@ -160,7 +160,7 @@ print "done.";
 #
 printf("Distilling final image (may take a few minutes)...");
 system "dd if=".$config_card_reader." bs=4M count=".(int($final_size/8192)+1).
-    " | xz > firmware/images/".$ARGV[0];
+    " | xz > ".$config_firmware_root."/images/".$ARGV[0];
 print "done.";
 
 

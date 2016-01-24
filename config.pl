@@ -23,4 +23,9 @@
 #
 # The device to use for reading/writing images
 #
-$config_card_reader="/dev/sdb"
+$config_card_reader="/dev/sdb";
+
+#
+# The location of the firmware store.
+#
+$config_firmware_root="/home/fredg/ImageForge/firmware";

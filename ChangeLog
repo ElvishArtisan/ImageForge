@@ -7,3 +7,5 @@
 	* Completed 'decant.pl'.
 2016-01-22 Fred Gleason <fredg@paravelsystems.com>
 	* Completed 'distill.pl'.
+2016-01-23 Fred Gleason <fredg@paravelsystems.com>
+	* Implemented a '$config_firmware_root' parameter in 'config.pl'.
