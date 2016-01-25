@@ -33,7 +33,7 @@ sub Prompt
 sub GetRootFilesystems
 {
     opendir DIR, $config_firmware_root."/rootfs" or 
-	die "cannot open firmware/rootfs: $!";
+	die "cannot open ".$config_firmware_root."/rootfs:"." $!";
     my @filesystems=readdir DIR;
     closedir DIR;
     return @filesystems;
@@ -80,7 +80,7 @@ sub ClearAutomounts
 sub GetImages
 {
     opendir DIR, $config_firmware_root."/images" or
-	die "cannot open firmware/images: $!";
+	die "cannot open ".$config_firmware_root."/images: $!";
     my @images=readdir DIR;
     closedir DIR;
     return @images;

@@ -9,3 +9,5 @@
 	* Completed 'distill.pl'.
 2016-01-23 Fred Gleason <fredg@paravelsystems.com>
 	* Implemented a '$config_firmware_root' parameter in 'config.pl'.
+2016-01-23 Fred Gleason <fredg@paravelsystems.com>
+	* Added a sample configuration in 'conf/imageforge_conf-sample.pl'.

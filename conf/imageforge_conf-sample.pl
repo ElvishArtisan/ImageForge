@@ -1,8 +1,8 @@
 #!/bin/perl
 
-# config.pl
+# imageforge_conf.pl
 #
-# Configuration values for the ImageForge system.
+# This is the default configuration file for the ImageForge system.
 #
 #   (C) Copyright 2016 Fred Gleason <fredg@paravelsystems.com>
 #

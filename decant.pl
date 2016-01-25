@@ -20,8 +20,9 @@
 #   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #
 
+do "/etc/imageforge_conf.pl";
+
 do "common.pl";
-do "config.pl";
 
 my $USAGE="decant.pl [--list-images] [image-name]";
 
