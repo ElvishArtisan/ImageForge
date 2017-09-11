@@ -11,3 +11,6 @@
 	* Implemented a '$config_firmware_root' parameter in 'config.pl'.
 2016-01-23 Fred Gleason <fredg@paravelsystems.com>
 	* Added a sample configuration in 'conf/imageforge_conf-sample.pl'.
+2017-09-11 Fred Gleason <fredg@paravelsystems.com>
+	* Added calls to sync(8) and sleep(1) in the 'AppendFilesystem()'
+	function of 'distill.pl'.

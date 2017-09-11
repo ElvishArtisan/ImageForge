@@ -52,6 +52,8 @@ sub AppendFilesystem
     system "parted ".$config_card_reader." mkpart primary ext4 ".
 	($max_end+1)."s ".($fs_size+$max_end+1)."s";
     system "partprobe";
+    system "sync";
+    system "sleep 10";
     system "mkfs.ext4 -b 4096 -j ".$config_card_reader.($max_partnum+1);
 
     $ret[0]=$config_card_reader.($max_partnum+1);
