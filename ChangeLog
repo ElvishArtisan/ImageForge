@@ -16,3 +16,6 @@
 	function of 'distill.pl'.
 2024-07-14 Fred Gleason <fredg@paravelsystems.com>
 	* Modified scripts to work correctly with Perl 5.
+2024-07-14 Fred Gleason <fredg@paravelsystems.com>
+	* Fixed output of the usage hint in 'decant.pl'.
+	* Fixed output of the '--list-roots' switch in 'distill.pl'.

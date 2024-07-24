@@ -4,7 +4,7 @@
 #
 # Write a finished firmware image to a card.
 #
-#   (C) Copyright 2016 Fred Gleason <fredg@paravelsystems.com>
+#   (C) Copyright 2016-2024 Fred Gleason <fredg@paravelsystems.com>
 #
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License version 2 as
@@ -27,7 +27,7 @@ do "./common.pl";
 my $USAGE="decant.pl [--list-images] [image-name]";
 
 if(@ARGV==0) {
-    print $USAGE;
+    print $USAGE."\n";
     exit 256;
 }
 
