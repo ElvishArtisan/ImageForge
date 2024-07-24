@@ -1,4 +1,4 @@
-#!/bin/perl -Wall
+#!/usr/bin/perl -W
 
 # decant.pl
 #
@@ -22,7 +22,7 @@
 
 do "/etc/imageforge_conf.pl";
 
-do "common.pl";
+do "./common.pl";
 
 my $USAGE="decant.pl [--list-images] [image-name]";
 
@@ -38,7 +38,7 @@ if($ARGV[0] eq "--list-images") {
     my @images=&GetImages();
     for(my $i=0;$i<@images;$i++) {
 	if(substr($images[$i],-3) eq ".xz") {
-	    print $images[$i];
+	    print $images[$i]."\n";
 	}
     }
     exit 0;

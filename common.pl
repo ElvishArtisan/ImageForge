@@ -1,4 +1,4 @@
-#!/bin/perl -Wall
+#!/bin/perl -W
 
 # common.pl
 #
