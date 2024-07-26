@@ -66,7 +66,7 @@ sub AppendFilesystem
 my $USAGE="distill.pl [--list-images] [--list-roots] [output-image boot-image rootfs]";
 
 if(@ARGV==0) {
-    print $USAGE;
+    print $USAGE."\n";
     exit 256;
 }
 
@@ -93,7 +93,7 @@ if($ARGV[0] eq "--list-roots") {
     exit 0;
 }
 if(@ARGV!=3) {
-    print $USAGE;
+    print $USAGE."\n";
     exit 256;
 }
 
@@ -101,7 +101,7 @@ if(@ARGV!=3) {
 # Check that boot image exists
 #
 if(!&ImageExists($ARGV[1])) {
-    print STDERR "distill.pl: no such image";
+    print STDERR "distill.pl: no such image\n";
     exit 256;
 }
 
@@ -109,7 +109,7 @@ if(!&ImageExists($ARGV[1])) {
 # Check that root filesystems exists
 #
 if(!&RootFilesystemExists($ARGV[2])) {
-    print STDERR "distill.pl: no such rootfs";
+    print STDERR "distill.pl: no such rootfs\n";
     exit 256;
 }
 
@@ -121,13 +121,13 @@ my $fs_size=int(120*&GetRootFilesystemSize($ARGV[2])/100);
 #
 # Prompt for blank card
 #
-print "";
-print "----------------------------------------------------------";
-print " Insert blank card in reader ".$config_card_reader.".";
-print " WARNING: This will destroy any existing contents of card!";
-print "----------------------------------------------------------";
+print "\n";
+print "----------------------------------------------------------\n";
+print " Insert blank card in reader ".$config_card_reader.".\n";
+print " WARNING: This will destroy any existing contents of card!\n";
+print "----------------------------------------------------------\n";
 if(!&Prompt("Proceed")) {
-    print "Operation cancelled!";
+    print "Operation cancelled!\n";
     exit 0;
 }
 
@@ -156,7 +156,7 @@ system "mount ".$newpart_name." /mnt";
 system "cp -a ".$config_firmware_root."/rootfs/".$ARGV[2]."/* /mnt/";
 system "umount ".$newpart_name;
 system "sync";
-print "done.";
+print "done.\n";
 
 #
 # Copy distilled image
@@ -164,10 +164,10 @@ print "done.";
 printf("Distilling final image (may take a few minutes)...");
 system "dd if=".$config_card_reader." bs=4M count=".(int($final_size/8192)+1).
     " | xz > ".$config_firmware_root."/images/".$ARGV[0];
-print "done.";
+print "done.\n";
 
 
-print "";
-print "Done!";
+print "\n";
+print "Done!\n";
 print "";
 exit 0;

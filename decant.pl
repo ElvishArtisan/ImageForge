@@ -44,7 +44,7 @@ if($ARGV[0] eq "--list-images") {
     exit 0;
 }
 if(@ARGV!=1) {
-    print $USAGE;
+    print $USAGE."\n";
     exit 256;
 }
 
@@ -52,20 +52,20 @@ if(@ARGV!=1) {
 # Check that image exists
 #
 if(!&ImageExists($ARGV[0])) {
-    print STDERR "decant.pl: no such image";
+    print STDERR "decant.pl: no such image\n";
     exit 256;
 }
 
 #
 # Prompt for blank card
 #
-print "";
-print "----------------------------------------------------------";
-print " Insert blank card in reader ".$config_card_reader.".";
-print " WARNING: This will destroy any existing contents of card!";
-print "----------------------------------------------------------";
+print "\n";
+print "----------------------------------------------------------\n";
+print " Insert blank card in reader ".$config_card_reader.".\n";
+print " WARNING: This will destroy any existing contents of card!\n";
+print "----------------------------------------------------------\n";
 if(!&Prompt("Proceed")) {
-    print "Operation cancelled!";
+    print "Operation cancelled!\n";
     exit 0;
 }
 
@@ -84,7 +84,8 @@ if(!&Prompt("Proceed")) {
 #
 &ExpandFilesystem();
 
-print "";
-print "Done!";
-print "";
+print "\n";
+print "Done!\n";
+print "\n";
+
 exit 0;
