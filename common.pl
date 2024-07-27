@@ -30,6 +30,32 @@ sub Prompt
 }
 
 
+sub MountFirmware
+{
+    if(opendir DIR,$config_firmware_root."/firmware") {
+	closedir DIR;
+	return;
+    }
+    if(system("mount $config_firmware_root") != 0) {
+	exit(1);
+    }
+    print "mounted firmware at ".$config_firmware_root."\n";
+}
+
+
+sub UnmountFirmware
+{
+    if(opendir DIR,$config_firmware_root."/firmware") {
+	closedir DIR;
+	if(system("umount $config_firmware_root") != 0) {
+	    exit(1);
+	}
+	print "unmounted firmware at ".$config_firmware_root."\n";
+	return;
+    }
+}
+
+
 sub GetRootFilesystems
 {
     opendir DIR, $config_firmware_root."/firmware/rootfs" or 
