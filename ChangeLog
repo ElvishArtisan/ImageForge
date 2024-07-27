@@ -19,5 +19,5 @@
 2024-07-24 Fred Gleason <fredg@paravelsystems.com>
 	* Fixed output of the usage hint in 'decant.pl'.
 	* Fixed output of the '--list-roots' switch in 'distill.pl'.
-2024-07-24 Fred Gleason <fredg@paravelsystems.com>
+2024-07-26 Fred Gleason <fredg@paravelsystems.com>
 	* More print formatting fixes in 'distill.pl' and 'decant.pl'.
