@@ -21,3 +21,6 @@
 	* Fixed output of the '--list-roots' switch in 'distill.pl'.
 2024-07-26 Fred Gleason <fredg@paravelsystems.com>
 	* More print formatting fixes in 'distill.pl' and 'decant.pl'.
+2024-07-27 Fred Gleason <fredg@paravelsystems.com>
+	* Modified the '$config_firmware_root' parameter in the configuration
+	to point to the root of the data tree.

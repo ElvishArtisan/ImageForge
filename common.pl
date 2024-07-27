@@ -32,8 +32,8 @@ sub Prompt
 
 sub GetRootFilesystems
 {
-    opendir DIR, $config_firmware_root."/rootfs" or 
-	die "cannot open ".$config_firmware_root."/rootfs:"." $!";
+    opendir DIR, $config_firmware_root."/firmware/rootfs" or 
+	die "cannot open ".$config_firmware_root."/firmware/rootfs:"." $!";
     my @filesystems=readdir DIR;
     closedir DIR;
     return @filesystems;
@@ -57,7 +57,7 @@ sub GetRootFilesystemSize
 {
     $fs_name=$_[0];
 
-    my $cmd="du -s --block-size 512 ".$config_firmware_root."/rootfs/".$fs_name;
+    my $cmd="du -s --block-size 512 ".$config_firmware_root."/firmware/rootfs/".$fs_name;
     my @f0=split " ",`$cmd`;
 
     return $f0[0];
@@ -79,8 +79,8 @@ sub ClearAutomounts
 
 sub GetImages
 {
-    opendir DIR, $config_firmware_root."/images" or
-	die "cannot open ".$config_firmware_root."/images: $!";
+    opendir DIR, $config_firmware_root."/firmware/images" or
+	die "cannot open ".$config_firmware_root."/firmware/images: $!";
     my @images=readdir DIR;
     closedir DIR;
     return @images;
@@ -106,7 +106,7 @@ sub WriteImage
     my $image=$_[1];
 
     printf("Writing image (may take a few minutes)...");
-    my @args=("xz -cd ".$config_firmware_root."/images/".$image.
+    my @args=("xz -cd ".$config_firmware_root."/firmware/images/".$image.
 	      " | dd of=".$dest." bs=4M");
     system @args;    
     system "sync";

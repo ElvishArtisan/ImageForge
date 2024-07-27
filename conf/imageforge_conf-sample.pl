@@ -2,7 +2,7 @@
 
 # imageforge_conf.pl
 #
-# This is the default configuration file for the ImageForge system.
+# This is the configuration file for the ImageForge system.
 #
 #   (C) Copyright 2016 Fred Gleason <fredg@paravelsystems.com>
 #
@@ -23,9 +23,9 @@
 #
 # The device to use for reading/writing images
 #
-$config_card_reader="/dev/sdb";
+$config_card_reader="/dev/sdc";
 
 #
 # The location of the firmware store.
 #
-$config_firmware_root="/home/fredg/ImageForge/firmware";
+$config_firmware_root="/var/ImageForgeFirmware";
