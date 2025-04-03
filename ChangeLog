@@ -29,3 +29,6 @@
 	'common.pl'.
 	* Added a 'mount.pl' command.
 	* Added an 'unmount.pl' command.
+2025-04-03 Fred Gleason <fredg@paravelsystems.com>
+	* Modified placeholder files beneath 'firmware/' to accomodate
+	out-of-repo data files.

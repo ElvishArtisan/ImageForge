@@ -2,3 +2,5 @@
 *-bootfs
 *-rootfs
 *.xz
+firmware/images
+firmware/rootfs
